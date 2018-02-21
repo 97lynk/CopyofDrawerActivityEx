@@ -34,24 +34,23 @@
                 app:layout_collapseMode="parallax"
                 />
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/detail_toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@color/orange_trans_light"
-                android:layout_marginTop="0dp"
-                app:layout_collapseMode="parallax"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="26sp"
-                    android:text="Sản phẩm Trà sữa con gái"
-                    android:textColor="#ffffff"
-                    android:textStyle="normal"/>
+            <!--<android.support.v7.widget.Toolbar-->
+                <!--android:id="@+id/detail_toolbar"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="?attr/actionBarSize"-->
+                <!--android:background="@color/orange_trans_light"-->
+                <!--app:layout_collapseMode="parallax"-->
+                <!--app:popupTheme="@style/AppTheme.NoActionBar"-->
+                <!--&gt;-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="25sp"-->
+                    <!--android:text="Sản phẩm Trà sữa con gái"-->
+                    <!--android:textColor="#ffffff"-->
+                    <!--android:textStyle="normal"/>-->
 
-            </android.support.v7.widget.Toolbar>
+            <!--</android.support.v7.widget.Toolbar>-->
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
@@ -72,23 +71,22 @@
         />
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
-        android:clipToPadding="false"
+        android:clipToPadding="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
             android:orientation="vertical">
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:elevation="5dp"
+                android:elevation="@dimen/cardview_default_elevation"
                 app:cardUseCompatPadding="true"
                 >
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -101,7 +99,7 @@
                         android:layout_marginTop="5dp"
                         android:text="Trà sữa con gái"
                         android:textColor="@color/colorSecondaryDark"
-                        android:textSize="20sp"
+                        android:textSize="23sp"
                         android:textStyle="bold"
 
                         />
@@ -122,7 +120,7 @@
                             android:layout_height="wrap_content"
                             android:padding="8dp"
                             android:text="30,000VND"
-                            android:textColor="#00d0dd"
+                            android:textColor="#d000ff"
                             android:textSize="18sp"
                             android:textStyle="bold"
                             />
@@ -145,7 +143,7 @@
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 >
                 <TextView
                     android:layout_width="wrap_content"
@@ -167,153 +165,12 @@ Cùng công thức bí mật giúp các bạn gái giữ được tinh thần vu
                 <!--tools:listitem="@layout/item_in_list"-->
                 <!--&gt;-->
             <!--</android.support.v7.widget.RecyclerView>-->
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewMoreFood"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryLight"
-                android:orientation="vertical"
-                app:cardElevation="4dp"
-                android:layout_margin="2dp"
-                >
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="#fff"
-                    android:orientation="horizontal"
-                    android:paddingBottom="5dp"
-                    android:paddingTop="5dp"
-
-                    >
-                    <ImageView
-                        android:id="@+id/list_img_food"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/placeholder"
-                        />
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="3"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:orientation="vertical"
-                        android:layout_gravity="center_vertical">
-
-                        <TextView
-                            android:id="@+id/txt_list_food_name"
-                            android:layout_width="wrap_content"
-                            android:layout_weight="4"
-                            android:layout_height="wrap_content"
-                            android:text="Trà sữa đặc biệt"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:textColor="@android:color/black"/>
-                        <TextView
-                            android:id="@+id/item_food_cost"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="25,000 VNĐ"
-                            android:textColor="@color/colorSecondary"
-                            android:textStyle="bold"
-                            android:paddingTop="10dp"/>
-
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="8dp"
-                        android:src="@drawable/ic_add_to_cart"/>
-                </LinearLayout>
-
-
-
-            </android.support.v7.widget.CardView>
-
-
-
-            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryLight"
-                android:orientation="vertical"
-                app:cardElevation="4dp"
-                android:layout_margin="2dp"
-                >
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="#fff"
-                    android:orientation="horizontal"
-                    android:paddingBottom="5dp"
-                    android:paddingTop="5dp"
-
-                    >
-                    <ImageView
-
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/placeholder"
-                        />
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="3"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:orientation="vertical"
-                        android:layout_gravity="center_vertical">
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_weight="4"
-                            android:layout_height="wrap_content"
-                            android:text="Trà sữa Ô long"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:textColor="@android:color/black"/>
-                        <TextView
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="25,000 VNĐ"
-                            android:textColor="@color/colorSecondary"
-                            android:textStyle="bold"
-                            android:paddingTop="10dp"/>
-
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="8dp"
-                        android:src="@drawable/ic_add_to_cart"/>
-                </LinearLayout>
-
-
-
-            </android.support.v7.widget.CardView>
-
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_in_list" />
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>

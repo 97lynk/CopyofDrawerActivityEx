@@ -28,7 +28,9 @@
              >
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/listChildCat"
+                android:orientation="horizontal"
                 android:scrollbars="horizontal"
+                app:layoutManager="LinearLayoutManager"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/item_category_explore"/>
@@ -46,6 +48,7 @@
                 android:id="@+id/lvProduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
                 tools:listitem="@layout/item_in_list"/>
 
     </android.support.v4.widget.NestedScrollView>
