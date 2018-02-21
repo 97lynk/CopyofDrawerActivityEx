@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity
     lvItemCategory.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-            Intent intent = new Intent(MainActivity.this, ProductListActivity.class);
+            Intent intent = new Intent(MainActivity.this, CategoryExploreActivity.class);
             startActivity(intent);
 
         }

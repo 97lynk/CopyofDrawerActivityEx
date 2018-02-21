@@ -8,6 +8,7 @@ import android.com.hotandcool.domain.CategoryItem;
 import android.com.hotandcool.domain.ItemInList;
 import android.content.ClipData;
 import android.content.Context;
+import android.view.View;
 import android.widget.ArrayAdapter;
 
 import java.math.BigDecimal;
