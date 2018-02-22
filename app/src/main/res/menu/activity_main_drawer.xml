@@ -13,9 +13,9 @@
             android:icon="@drawable/ic_shopping_cart_black_24dp"
             android:title="Giỏ hàng" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_wait"
-            android:title="Yêu cầu" />
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account_circle_black_240dp"
+            android:title="Thông tin" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_exit"

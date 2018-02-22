@@ -22,7 +22,11 @@
         <activity android:name=".FoodDetailActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
-        <activity android:name=".ProductListActivity"></activity>
+        <activity android:name=".ProductListActivity" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

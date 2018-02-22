@@ -159,12 +159,12 @@ Cùng công thức bí mật giúp các bạn gái giữ được tinh thần vu
                     android:textSize="14sp"
                     />
             </android.support.v7.widget.CardView>
-            <!--<include layout="@layout/sample_more_food_view"/>-->
+            <!--<inclitems_historyyouitems_historyyout/sample_more_food_view"/>-->
             <!--<android.support.v7.widget.RecyclerView-->
                 <!--android:layout_width="match_parent"-->
                 <!--android:layout_height="wrap_content"-->
                 <!--android:id="@+id/list_quickAdd"-->
-                <!--tools:listitem="@layout/item_in_list"-->
+                <!--tools:listiteitems_historyyout/item_in_list"-->
                 <!--&gt;-->
             <!--</android.support.v7.widget.RecyclerView>-->
 <LinearLayout

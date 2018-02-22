@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity
 
 
 
-        //Mapping with layout
+        //Mapping with item_in_history
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         lvItemCategory = (ListView) findViewById(R.id.lvItemCategory);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -121,8 +121,8 @@ public class MainActivity extends AppCompatActivity
             Intent i = new Intent(this, LoginActivity.class);
             startActivity(i);
 
-        } else if (id == R.id.nav_slideshow) {
-            Intent i = new Intent(this, SignupActivity.class);
+        } else if (id == R.id.nav_profile) {
+            Intent i = new Intent(this, ProfileActivity.class);
             startActivity(i);
 
         } else if (id == R.id.nav_manage) {
