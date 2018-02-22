@@ -56,7 +56,11 @@ public class Bill1Adapter extends RecyclerView.Adapter<Bill1Adapter.Bill11Holder
                 holder.txtStatus1.setTextColor(Color.parseColor("#FFC107"));
                 break;
         }
-        Picasso.with(context).load(bill.getImg()).into(holder.img1);
+        Picasso.with(context)
+                .load(bill.getImg())
+                .error(R.drawable.placeholder_milktea)
+                .placeholder(R.drawable.placeholder_milktea)
+                .into(holder.img1);
     }
 
     @Override

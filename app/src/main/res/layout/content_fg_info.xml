@@ -29,7 +29,8 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -41,13 +42,13 @@
                         android:textSize="18dp" />
 
                     <TextView
+                        android:id="@+id/btnChangeInfo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:clickable="true"
-                        android:paddingRight="5dp"
                         android:text="Thay đổi"
                         android:textColor="#03A9F4" />
                 </RelativeLayout>
@@ -63,7 +64,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="5dp"
                     android:weightSum="2">
 
                     <TextView
@@ -73,12 +73,17 @@
                         android:text="Họ"
                         android:textColor="#000" />
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/txtLastName"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Nguyễn"
-                        android:textAlignment="textEnd" />
+                        android:enabled="false"
+                        android:textColor="#9E9E9E"
+                        android:textAlignment="textEnd"
+                        style="@style/TextAppearance.AppCompat.Small"
+                        android:backgroundTint="@android:color/transparent"/>
                 </LinearLayout>
 
                 <!--Tên-->
@@ -86,7 +91,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="5dp"
                     android:weightSum="2">
 
                     <TextView
@@ -96,12 +100,17 @@
                         android:text="Tên"
                         android:textColor="#000" />
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/txtFirstName"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:backgroundTint="@android:color/transparent"
+                        android:enabled="false"
+                        android:textColor="#9E9E9E"
                         android:text="Anh Tuấn"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        style="@style/TextAppearance.AppCompat.Small"/>
                 </LinearLayout>
 
                 <!--Ngày sinh-->
@@ -109,7 +118,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="5dp"
                     android:weightSum="2">
 
                     <TextView
@@ -119,12 +127,18 @@
                         android:text="Ngày sinh"
                         android:textColor="#000" />
 
-                    <TextView
+                    <Button
+                        android:id="@+id/btnBirthday"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="01/01/1997"
-                        android:textAlignment="textEnd" />
+                        android:enabled="false"
+                        android:textColor="#9E9E9E"
+                        android:textAlignment="textEnd"
+                        android:clickable="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        style="@style/Widget.AppCompat.Button.Small"/>
                 </LinearLayout>
 
                 <!--SDT-->
@@ -132,7 +146,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="5dp"
                     android:weightSum="2">
 
                     <TextView
@@ -142,12 +155,17 @@
                         android:text="Số điện thoại"
                         android:textColor="#000" />
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/txtSDT"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="0123456789"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:enabled="false"
+                        android:textColor="#9E9E9E"
+                        style="@style/TextAppearance.AppCompat.Small"
+                        android:backgroundTint="@android:color/transparent" />
                 </LinearLayout>
 
                 <!--Email-->
@@ -155,7 +173,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="5dp"
                     android:weightSum="2">
 
                     <TextView
@@ -165,12 +182,17 @@
                         android:text="Địa chỉ email"
                         android:textColor="#000" />
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/txtEmail"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="123@gmail.com"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:enabled="false"
+                        android:textColor="#9E9E9E"
+                        style="@style/TextAppearance.AppCompat.Small"
+                        android:backgroundTint="@android:color/transparent"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -183,25 +205,25 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:padding="5dp"
                     android:text="Mật khẩu"
                     android:textColor="#000"
                     android:textSize="18dp" />
 
                 <TextView
+                    android:id="@+id/btnChangePassword"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:clickable="true"
-                    android:paddingRight="5dp"
                     android:text="Thay đổi"
                     android:textColor="#03A9F4" />
             </RelativeLayout>
