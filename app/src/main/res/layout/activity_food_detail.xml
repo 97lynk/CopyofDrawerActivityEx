@@ -41,8 +41,7 @@
                 android:background="@color/orange_trans_light"
                 android:layout_marginTop="0dp"
                 app:layout_collapseMode="parallax"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                >
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

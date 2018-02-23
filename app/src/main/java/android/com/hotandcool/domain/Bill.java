@@ -1,10 +1,12 @@
 package android.com.hotandcool.domain;
 
+import java.io.Serializable;
+
 /**
  * Created by 97lynk on 22/02/2018.
  */
 
-public class Bill {
+public class Bill implements Serializable{
     private String dateTime;
     private double total;
     private String address;

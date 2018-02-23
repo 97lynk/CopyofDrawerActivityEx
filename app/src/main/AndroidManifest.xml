@@ -27,6 +27,10 @@
             android:name=".ProfileActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".BillDetailActivity"
+            android:label="@string/title_activity_bill_detailctivity"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

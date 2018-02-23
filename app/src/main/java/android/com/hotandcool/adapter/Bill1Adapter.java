@@ -1,8 +1,12 @@
 package android.com.hotandcool.adapter;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
+import android.com.hotandcool.BillDetailActivity;
 import android.com.hotandcool.R;
 import android.com.hotandcool.domain.Bill;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -39,6 +43,7 @@ public class Bill1Adapter extends RecyclerView.Adapter<Bill1Adapter.Bill11Holder
     @Override
     public void onBindViewHolder(Bill11Holder holder, int position) {
         final Bill bill = billList.get(position);
+        holder.bill = bill;
         holder.txtDateTime1.setText(bill.getDateTime());
         holder.txtTotal1.setText(bill.getTotal() + "đ");
         holder.txtAddress1.setText(bill.getAddress());
@@ -63,6 +68,7 @@ public class Bill1Adapter extends RecyclerView.Adapter<Bill1Adapter.Bill11Holder
                 .into(holder.img1);
     }
 
+
     @Override
     public int getItemCount() {
         return billList.size();
@@ -74,9 +80,9 @@ public class Bill1Adapter extends RecyclerView.Adapter<Bill1Adapter.Bill11Holder
         public TextView txtTotal1;
         public TextView txtAddress1;
         public TextView txtStatus1;
+        public Bill bill;
 
-
-        public Bill11Holder(View itemView) {
+        public Bill11Holder(final View itemView) {
             super(itemView);
 
             img1 = itemView.findViewById(R.id.img1);
@@ -84,6 +90,23 @@ public class Bill1Adapter extends RecyclerView.Adapter<Bill1Adapter.Bill11Holder
             txtTotal1 = itemView.findViewById(R.id.txtTotal1);
             txtAddress1 = itemView.findViewById(R.id.txtAddress1);
             txtStatus1 = itemView.findViewById(R.id.txtStatus1);
+
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(context, BillDetailActivity.class);
+                    i.putExtra("bill", bill);
+
+                    View sharedView = img1;
+                    String transitionName = "zoom";
+
+
+                    ActivityOptions transitionActivityOptions = ActivityOptions.makeSceneTransitionAnimation((Activity) context, sharedView, transitionName);
+                    context.startActivity(i, transitionActivityOptions.toBundle());
+                }
+            });
         }
+
     }
 }
